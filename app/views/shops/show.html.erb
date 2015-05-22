@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  Name:
+  <strong><%= @shop.name %></strong>
+</p>
+
+<p>
+  Min cph:
+  <strong><%= @shop.min_cph %></strong>
+</p>
+
+<p>
+  Max cph:
+  <strong><%= @shop.max_cph %></strong>
+</p>
+
+<p>
+  Avg dpc:
+  <strong><%= @shop.avg_dpc %></strong>
+</p>
+
+<p>
+  Hours:
+  <strong><%= @shop.hours %></strong>
+</p>
+
+<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%= link_to 'Back', shops_path %>

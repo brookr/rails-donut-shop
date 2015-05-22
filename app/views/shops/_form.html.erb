@@ -1,0 +1,37 @@
+<%= form_for(@shop) do |f| %>
+  <% if @shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shop.errors.count, "error") %> prohibited this shop from being saved:</h2>
+
+      <ul>
+      <% @shop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :min_cph %><br>
+    <%= f.number_field :min_cph %>
+  </div>
+  <div class="field">
+    <%= f.label :max_cph %><br>
+    <%= f.number_field :max_cph %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_dpc %><br>
+    <%= f.number_field :avg_dpc %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br>
+    <%= f.number_field :hours %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

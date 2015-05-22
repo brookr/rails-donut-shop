@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Top Pot Donut Shop Totals</title>
+    <meta description="count donut hourly totals">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <section class="background">
+      <%= image_tag('donut_bag.jpg') %>
+    </section>
+    <main>
+      <section class="header">
+        <h1 align="center">Top Pot Donut Counter</h1>
+      </section>
+      <%= yield %>
+      <br />
+    </main>
+    <aside>
+      <button><a href="http://www.toppotdoughnuts.com/cafe-info.html" id = "want-donut">Great. Now I want a donut.</a></button>
+    </aside>
+  
+    <footer>This table and page tabulate the hourly donut sales at Top Pot locations around the area. Add new shop locations in the provided section.</footer>
+  </body>
+</html>
